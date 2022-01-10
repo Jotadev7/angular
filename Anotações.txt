@@ -1,0 +1,15 @@
+Angular - Framework Web, Mobile e Desktop.
+
+AngularJS x Angular (Diferentes)
+
+Por que Angular?
+Rápido, moderno, simplificado, produtivo.
+
+Angular é baseado em componentes. A aplicação é a coleção de componentes (Consome API Rest através de services).
+Um componente tem template que está junto com a classe que possui propriedades e métodos com seus metadados.
+
+TypeScript - Conjunto SuperSet de JavaScript. Fortemente tipado. Ferramental rico na IDE. Precisa transpilar (na hora de compilar, gera um JavaScript). Desenvolvido pela Microsoft, criada pelo pai do C# e .NET, open source, baseado em orientação a objetos. 
+
+Requisitos: (REQUERIDO) HTML, CSS, JS. (DESEJÁVEL) Orientação a objetos, C# ou Java. (NÃO REQUERIDO) Angular 1.X, TypeScript.
+
+Setup do ambiente: NodeJS, NPM (Já vem com Node). Instalação do Angular CLI - npm install -g @angular/cli. 
