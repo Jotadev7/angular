@@ -13,3 +13,5 @@ TypeScript - Conjunto SuperSet de JavaScript. Fortemente tipado. Ferramental ric
 Requisitos: (REQUERIDO) HTML, CSS, JS. (DESEJÁVEL) Orientação a objetos, C# ou Java. (NÃO REQUERIDO) Angular 1.X, TypeScript.
 
 Setup do ambiente: NodeJS, NPM (Já vem com Node). Instalação do Angular CLI - npm install -g @angular/cli. 
+
+Ver depois: Anatomia do projeto Angular.
