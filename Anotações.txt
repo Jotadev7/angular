@@ -14,4 +14,9 @@ Requisitos: (REQUERIDO) HTML, CSS, JS. (DESEJÁVEL) Orientação a objetos, C# o
 
 Setup do ambiente: NodeJS, NPM (Já vem com Node). Instalação do Angular CLI - npm install -g @angular/cli. 
 
-Ver depois: Anatomia do projeto Angular.
+Components: 
+Primeira linha é importada a diretiva que é um componente do framework próprio do angular.
+O que vai dizer que é um componente é o @component. O selector é o nome como você irá invocar esse componente. Logo após temos o caminho do template(html) e o caminho do estilo(css).
+A exportação da classe usando typscript e o título que é uma variável.
+Para criar um componente: ng generate component pasta/NomeComponente
+ou ng g c NomeComponente (abreviados)
