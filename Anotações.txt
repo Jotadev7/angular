@@ -32,4 +32,19 @@ Na declaração é injectable (injetável). Providedin: 'root' é provisionado n
 Esse serviço precisa ser registrado no módulo, pega o nome e coloca dentro de providers no module.ts, fazer também a importação da pasta.
 Para gerar: ng g service Servico
 
-teste
+------------------- Criando a aplicação ---------------------
+
+ng new --minimal -g MeuProjeto (usando minimal para criar o projeto mais básico, sem os documentos de teste. E -g pra não criar o repositório do Git).
+
+------------------- Framework de Front-End ---------------------
+
+Bootstrap x Angular Material.
+Iremos utilizar o bootstrap para a aplicação.
+Bootstrap usa JavaScript com JQuery, não podemos misturar jQuery com Angular.
+NGX-Bootstrap encapsula essa parte jQuery para Angular. (Mas não é necessário, só se for usar algum recurso que seja dependente de JS)
+
+------------------- Dando uma cara a aplicação ---------------------
+
+O index.html é só a estrutura.
+Vamos remover o template do arquivo por templateUrl;
+Adicionado conteúdo HTML estilizado com Bootstrap.
