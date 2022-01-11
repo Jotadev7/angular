@@ -14,9 +14,21 @@ Requisitos: (REQUERIDO) HTML, CSS, JS. (DESEJÁVEL) Orientação a objetos, C# o
 
 Setup do ambiente: NodeJS, NPM (Já vem com Node). Instalação do Angular CLI - npm install -g @angular/cli. 
 
+Os arquivos spec são para teste, logo podemos deletá-los.
+
 Components: 
 Primeira linha é importada a diretiva que é um componente do framework próprio do angular.
 O que vai dizer que é um componente é o @component. O selector é o nome como você irá invocar esse componente. Logo após temos o caminho do template(html) e o caminho do estilo(css).
 A exportação da classe usando typscript e o título que é uma variável.
 Para criar um componente: ng generate component pasta/NomeComponente
 ou ng g c NomeComponente (abreviados)
+
+Decorators:
+Um decorator define o comportamento de uma classe do Angular.
+Para criar - ng g module NomeModulo
+
+Service:
+Na declaração é injectable (injetável). Providedin: 'root' é provisionado na raiz, serviço da raiz. Declaração da classe e construtor.
+Esse serviço precisa ser registrado no módulo, pega o nome e coloca dentro de providers no module.ts, fazer também a importação da pasta.
+Para gerar: ng g service Servico
+
