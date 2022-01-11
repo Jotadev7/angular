@@ -32,3 +32,4 @@ Na declaração é injectable (injetável). Providedin: 'root' é provisionado n
 Esse serviço precisa ser registrado no módulo, pega o nome e coloca dentro de providers no module.ts, fazer também a importação da pasta.
 Para gerar: ng g service Servico
 
+teste
