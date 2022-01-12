@@ -77,3 +77,18 @@ Event Binding: Realiza a chamada de um método com base no evento do elemento HT
 Two-way Binding: Exibe e atualiza um dado nas duas direções (template, componente), exemplo: 
 <input class="form-control" type="text" [(ngModel)]="evento.nome" />
 <label>Nome do evento: {{evento.nome}} </label>
+É a união de property binding com event binding.
+
+------------------- DataBind na prática ---------------------
+
+Criei um novo componente: ng g c demos/DataBinding
+Executei exemplos de interpolation, passando o valor entre {}. Exemplo de property binding passando o parâmetro entre [] pro Angular tomar de conta. Exemplo de event binding colocando o evento entre () para executar a função. Exemplo de two-way binding, primeiro comentando um código que simula esse resultado, e logo após usando de forma correta.
+O ngModel é o modelo. Toda vez que esse modelo for alterado então o nome vai receber o evento e depende de um módulo que não tinhamos importado. Para ele funcionar importamos no modulo o FormsModule no arquivo module.ts.
+
+
+------------------- Fake back-end ---------------------
+
+Primeiro instalei o pacote json.server utilizando o comando npm i json-server(roda em qualquer lugar).
+Criado arquivo produtos.json, com uma lista de produtos. 
+Rodando o comando json-server --watch nomeJson na pasta do projeto.
+

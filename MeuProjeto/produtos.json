@@ -1,0 +1,28 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "mouse Microsoft",
+            "valor": 15.90,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "mouse.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "Teclado Microsoft",
+            "valor": 30.00,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "teclado.jpg"
+        },
+        {
+            "id": 3,
+            "nome": "Monitor Microsoft",
+            "valor": 250.50,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "monitor.jpg"
+        }
+    ]
+}
