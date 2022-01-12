@@ -92,3 +92,10 @@ Primeiro instalei o pacote json.server utilizando o comando npm i json-server(ro
 Criado arquivo produtos.json, com uma lista de produtos. 
 Rodando o comando json-server --watch nomeJson na pasta do projeto.
 
+
+------------------- Criando o serviço ---------------------
+
+Para ser um serviço a classe precisa ter o @Injectable do angular/core. Logo após devemos registrar no módulo esse serviço.
+Primeiro precisamos de um endpoint.
+HttpClient, importando e passado como parâmetro pro construtor do serviço. 
+Importando o Observable, que é o callback que vai avisar quando receber algo.
