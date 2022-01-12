@@ -48,3 +48,32 @@ NGX-Bootstrap encapsula essa parte jQuery para Angular. (Mas não é necessário
 O index.html é só a estrutura.
 Vamos remover o template do arquivo por templateUrl;
 Adicionado conteúdo HTML estilizado com Bootstrap.
+
+------------------- Definindo os componentes ---------------------
+
+Criando o componente com ng g c navegacao/menu.
+Criando o componente com ng g c navegacao/home.
+Criando o componente com ng g c navegacao/footer.
+Removendo a implementação OnInit pois não vamos utilizar programação nesses componentes.
+Colocando os devidos conteúdos em cada um dos html dos componentes.
+Criamos a pasta de navegação com os componentes (inicial, rodapé e menu). O app.component.html possui apenas o que ele precisa exibir.
+
+------------------- Roteamento no Angular ---------------------
+
+Criando a pasta institucional e os componentes sobre e contato
+ng g c institucional/sobre
+ng g c institucional/contato
+Criando arquivo de rotas: app.routes.ts
+Adicionando as rotas no arquivo, e depois configurando no módulo principal (app.module.ts). Importar o RouterModule e o APP_BASE_HREF pra informar que o link base é o /.
+No app.component.html removemos o <app-home> e vamos utilizar a diretiva de navegação <router-outlet>.
+No menu.component.html removi os href para usar a diretiva [routerLink].
+
+------------------- Tipos de DataBind ---------------------
+
+Forma de exibir dados.
+Interpolation: Forma mais fácil de exibir um dado. É representado no template por dois pares de chaves, exemplo: <label>Nome: {{meuDado}} </label>.
+Property Binding: Define valor de uma propriedade do elemento HTML, exemplo: <img [src]="minhaUrl> (é a mesma coisa de fazer: <img src="{{minhaUrl}}">). É um conceito de One-way binding por que o valor da variável vem do componente até a property mas não faz o caminho contrário.
+Event Binding: Realiza a chamada de um método com base no evento do elemento HTML, exemplo: <button (click)='clickContador()'>Clique-me</button>. É muito utilizado para a submissão de formulários ou qualquer necessidade de processamento no componente com base em eventos conhecidos dos elementos HTML.
+Two-way Binding: Exibe e atualiza um dado nas duas direções (template, componente), exemplo: 
+<input class="form-control" type="text" [(ngModel)]="evento.nome" />
+<label>Nome do evento: {{evento.nome}} </label>
