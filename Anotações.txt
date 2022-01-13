@@ -107,3 +107,7 @@ Nas routes.ts adicionar o caminho pra esse componente. E o caminho para o produt
 Dentro desse componente criamos uma lista do tipo produto para receber os produtos. E no método OnInit chamamos o método obterProdutos usando o subscribe para escrever na lista. 
 No component.html criamos a diretiva ngFor* para que seja criado um card para cada produto da lista de produtos. E nos respectivos campos, usamos interpolation {{}} para coletar os valores. E dentro do link criamos um [routerModule] para que seja possível visualizar os detalhes daquele determinado produto.
 No module.ts importamos o httpClientModule. 
+
+------------------- Utilizando pipe ---------------------
+
+Pipe é um decorator, utilizado para fazer alterações nas representações. Como por exemplo o pipe currency, que transforma o valor em monetário. Ou o TitleCasePipe, que faz com que a primeira letra de cada palavra fique maiúscula.

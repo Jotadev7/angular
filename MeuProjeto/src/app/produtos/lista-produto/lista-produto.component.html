@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <h4 class="card-title">{{produto.nome}}</h4>
                     <p>Por apenas:</p>
-                    <div><h4>R$ {{produto.valor}}</h4></div>
+                    <div><h4>{{produto.valor | currency: 'BRL'}}</h4></div>
                 </div>
                 <div class="card-footer">
                     <a class="btn btn-primary">
