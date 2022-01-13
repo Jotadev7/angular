@@ -23,6 +23,54 @@
             "promocao": false,
             "valorPromo": 0,
             "imagem": "monitor.jpg"
+        },
+        {
+            "id": 4,
+            "nome": "mouse Microsoft",
+            "valor": 15.90,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "mouse.jpg"
+        },
+        {
+            "id": 5,
+            "nome": "Teclado Microsoft",
+            "valor": 30.00,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "teclado.jpg"
+        },
+        {
+            "id": 6,
+            "nome": "Monitor Microsoft",
+            "valor": 250.50,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "monitor.jpg"
+        },
+        {
+            "id": 7,
+            "nome": "mouse Microsoft",
+            "valor": 15.90,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "mouse.jpg"
+        },
+        {
+            "id": 8,
+            "nome": "Teclado Microsoft",
+            "valor": 30.00,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "teclado.jpg"
+        },
+        {
+            "id": 9,
+            "nome": "Monitor Microsoft",
+            "valor": 250.50,
+            "promocao": false,
+            "valorPromo": 0,
+            "imagem": "monitor.jpg"
         }
     ]
 }

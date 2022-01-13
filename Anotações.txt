@@ -99,3 +99,11 @@ Para ser um serviço a classe precisa ter o @Injectable do angular/core. Logo ap
 Primeiro precisamos de um endpoint.
 HttpClient, importando e passado como parâmetro pro construtor do serviço. 
 Importando o Observable, que é o callback que vai avisar quando receber algo.
+
+------------------- Consumindo o serviço através do componente ---------------------
+
+Criado o novo componente: ng g c produtos/ListaProduto
+Nas routes.ts adicionar o caminho pra esse componente. E o caminho para o produto-detalhe passando o id como parâmetro.
+Dentro desse componente criamos uma lista do tipo produto para receber os produtos. E no método OnInit chamamos o método obterProdutos usando o subscribe para escrever na lista. 
+No component.html criamos a diretiva ngFor* para que seja criado um card para cada produto da lista de produtos. E nos respectivos campos, usamos interpolation {{}} para coletar os valores. E dentro do link criamos um [routerModule] para que seja possível visualizar os detalhes daquele determinado produto.
+No module.ts importamos o httpClientModule. 
