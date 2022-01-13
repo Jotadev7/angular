@@ -113,3 +113,27 @@ No module.ts importamos o httpClientModule.
 Pipe é um decorator, utilizado para fazer alterações nas representações. Como por exemplo o pipe currency, que transforma o valor em monetário. Ou o TitleCasePipe, que faz com que a primeira letra de cada palavra fique maiúscula. (Não funcionou)
 Você pode criar seu próprio pipe.
 
+
+------------------- Diretivas de decisão ---------------------
+
+As mais utilizadas são ngIf, ngFor, ngSwitch ou SwitchCase.
+
+
+------------------- Atualização de versão ---------------------
+
+Excluir a página node_modules.
+Instalar o npm-check-updates.
+npm i npm-check-updates
+Rodar o comando ncu
+ncu -u para upgrade, sobscreve o arquivo.
+
+------------------- Realizando debug ---------------------
+
+Feito direto pelo inspecionar no navegador. (Apenas quando estiver no desenvolvimento)
+No VSCode, extensões como Debugger for Chrome. 
+
+------------------- Entregando a aplicação ---------------------
+
+Realizar compilação em produção.
+ng b --prod
+A pasta dist criada sobe para o servidor.
