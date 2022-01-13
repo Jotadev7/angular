@@ -110,4 +110,6 @@ No module.ts importamos o httpClientModule.
 
 ------------------- Utilizando pipe ---------------------
 
-Pipe é um decorator, utilizado para fazer alterações nas representações. Como por exemplo o pipe currency, que transforma o valor em monetário. Ou o TitleCasePipe, que faz com que a primeira letra de cada palavra fique maiúscula.
+Pipe é um decorator, utilizado para fazer alterações nas representações. Como por exemplo o pipe currency, que transforma o valor em monetário. Ou o TitleCasePipe, que faz com que a primeira letra de cada palavra fique maiúscula. (Não funcionou)
+Você pode criar seu próprio pipe.
+

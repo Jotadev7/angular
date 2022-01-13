@@ -9,11 +9,25 @@
                         <img src="/assets/{{produto.imagem}}" height="164px" width="253px">
                     </div>
                 </a>
-                <div class="card-body">
-                    <h4 class="card-title">{{produto.nome}}</h4>
-                    <p>Por apenas:</p>
+
+                <h4 class="card-title">{{produto.nome}}</h4>
+
+                <div [ngSwitch]="produto.promocao">
+                    <p *ngSwitchCase="true">Promoção!</p>
+                    <p *ngSwitchCase="false">Por apenas:</p>
+                </div>
+
+                <div *ngIf="produto.promocao" class="card-body">
+                    <div><h4 class="card-text">De:
+                        <small><del>{{produto.valor | currency: 'BRL'}}</del></small>
+                        Por: {{produto.valorPromo | currency: 'BRL'}}
+                    </h4></div>
+                </div>
+
+                <div *ngIf="!produto.promocao" class="card-body">
                     <div><h4>{{produto.valor | currency: 'BRL'}}</h4></div>
                 </div>
+
                 <div class="card-footer">
                     <a class="btn btn-primary">
                         <span class="fa fa-shopping-cart"></span> Comprar

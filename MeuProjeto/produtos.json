@@ -28,7 +28,7 @@
             "id": 4,
             "nome": "mouse Microsoft",
             "valor": 15.90,
-            "promocao": false,
+            "promocao": true,
             "valorPromo": 0,
             "imagem": "mouse.jpg"
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "nome": "Teclado Microsoft",
             "valor": 30.00,
-            "promocao": false,
+            "promocao": true,
             "valorPromo": 0,
             "imagem": "teclado.jpg"
         },
