@@ -137,3 +137,20 @@ No VSCode, extensões como Debugger for Chrome.
 Realizar compilação em produção.
 ng b --prod
 A pasta dist criada sobe para o servidor.
+
+***** Desenvolvimento avançado com Angular *****
+
+------------------- Promises vs Observables ---------------------
+
+Promise é uma promeça, que informa que irá retornar alguma coisa. Callback simples, que ao chamar o THEN estamos chamando o resultado (seja o erro ou o sucesso). 
+Observable é um objeto mais completo, com pegada reativa (É uma promise mais completa). 
+Criado um novo projeto ng new RXJS --minimal=true.
+Criado método promise para exemplo, implementando exemplo simples no método onInit.
+
+------------------- Angular Style Guide ---------------------
+
+Guia para consulta. Boas práticas como uma coisa por arquivo (um componente, um serviço, uma classe), considerar usar até 400 linha de código. Fazer funções pequenas, considerar limitar funções em até 75 linhas.
+
+------------------- Minha primeira Observable ---------------------
+
+Criado método que retorna uma Observable do tipo string, usando o método next do subscriber. Diferença em relação a promise: Podemos enviar uma ou mais informações para o subscriber.

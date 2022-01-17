@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -42,16 +43,29 @@ export class AppComponent implements OnInit{
     })
   }
 
+  minhaObservable(nome: string) : Observable<string>{
+    return new Observable(subscriber => {
+      if(nome === 'Eduardo') {
+        subscriber.next('Olá, ' + nome);
+        subscriber.next('Olá novamente, ' + nome);
+        setTimeout(() => {
+          subscriber.next('Resposta com delay: Olá de novo! ' + nome);
+        }, 4000);
+      } else {
+        subscriber.error('Ops! Deu erro.');
+      }
+    })
+  }
+
   ngOnInit(): void {
     /*this.minhaPromise('Eduardo')
     .then(result => console.log(result));*/
 
-    this.minhaPromise('Maria')
+    /*this.minhaPromise('Maria')
     .then(result => console.log(result))
-    .catch(erro => console.log(erro));
+    .catch(erro => console.log(erro));*/
 
-    /*Angular Style Guide
-    Guia para consulta. Boas práticas como uma coisa por arquivo (um componente, um serviço, uma classe), considerar usar até 400 linha de código. Fazer funções pequenas, considerar limitar funções em até 75 linhas.*/
+    this.minhaObservable('Eduardo')
+    .subscribe(result => console.log(result), erro => console.log(erro));
   }
-
 }
