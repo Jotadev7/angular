@@ -59,6 +59,32 @@ export class AppComponent implements OnInit{
     })
   }
 
+  usuarioObservable(nome: string, email: string) : Observable<Usuario>{
+    return new Observable(subscriber => {
+      if(nome === 'Admin') {
+        let usuario = new Usuario(nome, email);
+
+        setTimeout(() => {
+          subscriber.next(usuario);
+        }, 1000);
+        setTimeout(() => {
+          subscriber.next(usuario);
+        }, 2000);
+        setTimeout(() => {
+          subscriber.next(usuario);
+        }, 3000);
+        setTimeout(() => {
+          subscriber.next(usuario);
+        }, 4000);
+        setTimeout(() => {
+          subscriber.complete();
+        }, 5000);
+      } else {
+        subscriber.error('Ops! Deu erro.');
+      }
+    })
+  }
+
   ngOnInit(): void {
     /*this.minhaPromise('Eduardo')
     .then(result => console.log(result));*/
@@ -78,11 +104,30 @@ export class AppComponent implements OnInit{
       complete: () => console.log('FIM!')
     }
 
-    const obs = this.minhaObservable('Eduardo');
-    obs.subscribe(observer);
+    /*const obs = this.minhaObservable('Eduardo');
+    obs.subscribe(observer);*/
+
+    const obs = this.usuarioObservable('Admin', '123@gmail.com');
+    const subs = obs.subscribe(observer);
+
+    setTimeout(() => {
+      subs.unsubscribe() //cancelando a subscription, diferente do complete.
+      console.log('Estado da conexão fechada? : '  + subs.closed)
+    }, 3500);
   }
 
   escrever(texto: string) {
     console.log(texto);
   }
+}
+
+
+export class Usuario {
+  constructor(nome: string, email: string) {
+    this.nome = nome;
+    this.email = email;
+  }
+
+  nome: string;
+  email: string;
 }

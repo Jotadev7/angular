@@ -146,6 +146,9 @@ Promise é uma promeça, que informa que irá retornar alguma coisa. Callback si
 Observable é um objeto mais completo, com pegada reativa (É uma promise mais completa). 
 Criado um novo projeto ng new RXJS --minimal=true.
 Criado método promise para exemplo, implementando exemplo simples no método onInit.
+*Diferenças*
+Promises: Nativas do ES6, eager, processa um único evento, não aceita cancelamento, não faz retry.
+Observables: Objeto reativo RXJS, lazy, processa N eventos, aceita cancelamento e faz retry.
 
 ------------------- Angular Style Guide ---------------------
 
@@ -153,4 +156,12 @@ Guia para consulta. Boas práticas como uma coisa por arquivo (um componente, um
 
 ------------------- Minha primeira Observable ---------------------
 
-Criado método que retorna uma Observable do tipo string, usando o método next do subscriber. Diferença em relação a promise: Podemos enviar uma ou mais informações para o subscriber.
+Criado método que retorna uma Observable do tipo string, usando o método next do subscriber. Diferença em relação a promise: Podemos enviar uma ou mais informações para o subscriber. Ao precisar receber mais de uma resposta ao longo do tempo, usamos Observable.
+
+------------------- Entendendo o Observer ---------------------
+
+Para o observador existir é preciso de um subscribe (operador/método). É uma estrutura de instruções pra trabalhar com a subscription. Ao criar o Observer respeitar a estrutura de retorno (next, error e complete).
+
+------------------- Subscribe e Unsubscribe ---------------------
+
+Criando classe usuário para o exemplo e duplicando método observable. Unsubscribe é usada para cancelar uma subscribe, diferente do complete.
