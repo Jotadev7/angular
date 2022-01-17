@@ -50,7 +50,9 @@ export class AppComponent implements OnInit{
         subscriber.next('Olá novamente, ' + nome);
         setTimeout(() => {
           subscriber.next('Resposta com delay: Olá de novo! ' + nome);
-        }, 4000);
+          /*subscriber.complete(); Se estiver dessa forma seria exibido.*/
+        }, 5000);
+        subscriber.complete(); // Se o complete estiver aqui abaixo do setTimout não irá esperar o tempo para exibir, logo não será exibido, irá completar o Observable.
       } else {
         subscriber.error('Ops! Deu erro.');
       }
@@ -64,8 +66,23 @@ export class AppComponent implements OnInit{
     /*this.minhaPromise('Maria')
     .then(result => console.log(result))
     .catch(erro => console.log(erro));*/
+ 
+    /*this.minhaObservable('Eduardo')
+      .subscribe(result => console.log(result),
+      erro => console.log(erro),
+      () => console.log('FIM!'));*/
 
-    this.minhaObservable('Eduardo')
-    .subscribe(result => console.log(result), erro => console.log(erro));
+    const observer = {
+      next: (valor: any) => this.escrever(valor), 
+      error: (erro: any) => console.log('Erro: ', erro),
+      complete: () => console.log('FIM!')
+    }
+
+    const obs = this.minhaObservable('Eduardo');
+    obs.subscribe(observer);
+  }
+
+  escrever(texto: string) {
+    console.log(texto);
   }
 }
