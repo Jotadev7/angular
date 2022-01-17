@@ -49,6 +49,9 @@ export class AppComponent implements OnInit{
     this.minhaPromise('Maria')
     .then(result => console.log(result))
     .catch(erro => console.log(erro));
+
+    /*Angular Style Guide
+    Guia para consulta. Boas práticas como uma coisa por arquivo (um componente, um serviço, uma classe), considerar usar até 400 linha de código. Fazer funções pequenas, considerar limitar funções em até 75 linhas.*/
   }
 
 }
