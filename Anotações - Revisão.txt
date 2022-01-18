@@ -177,3 +177,9 @@ ng g c demos/reactiveForms/cadastro
 Adicionamos o modulo ReactiveForms ao app.module.
 Criamos o botão cadastro no componente html do menu, e inserimos o path do cadastro component no arquivo de rotas.
 Criado formulário no componente cadastro, e estilizado no arquivo style.css geral.
+No componente de cadastro foi criado um cadastroForm: FormGroup, e no método onInit foi instanciado um novo FormGroup passando todos os valores com o formControl. No componente html foi inserido a propriedade formControlName="nome" nos inputs do formulário.
+(Para submeter um formulário pelo angular é preciso usar o (ngSubmit) no formulário.
+
+------------------- FormBuilder ---------------------
+
+No construtor do componente precisamos injetá-lo. Para utiliza-lo usamos os métodos, no exemplo usado o group. Recomendando a utilização.
