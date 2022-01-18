@@ -169,3 +169,11 @@ Criando classe usuário para o exemplo e duplicando método observable. Unsubscr
 ------------------- Angular Reactive Forms ---------------------
 
 Escalável, e mais robusto (focar nessa metodologia). Utilizando template básico do projeto para trabalhar com os formulários.
+
+------------------- FormControls e FormGroups ---------------------
+
+Primeiro criamos os componentes demonstrativos.
+ng g c demos/reactiveForms/cadastro
+Adicionamos o modulo ReactiveForms ao app.module.
+Criamos o botão cadastro no componente html do menu, e inserimos o path do cadastro component no arquivo de rotas.
+Criado formulário no componente cadastro, e estilizado no arquivo style.css geral.
