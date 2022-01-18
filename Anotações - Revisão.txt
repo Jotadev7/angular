@@ -165,3 +165,7 @@ Para o observador existir é preciso de um subscribe (operador/método). É uma 
 ------------------- Subscribe e Unsubscribe ---------------------
 
 Criando classe usuário para o exemplo e duplicando método observable. Unsubscribe é usada para cancelar uma subscribe, diferente do complete.
+
+------------------- Angular Reactive Forms ---------------------
+
+Escalável, e mais robusto (focar nessa metodologia). Utilizando template básico do projeto para trabalhar com os formulários.
