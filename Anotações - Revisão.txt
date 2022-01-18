@@ -183,3 +183,15 @@ No componente de cadastro foi criado um cadastroForm: FormGroup, e no método on
 ------------------- FormBuilder ---------------------
 
 No construtor do componente precisamos injetá-lo. Para utiliza-lo usamos os métodos, no exemplo usado o group. Recomendando a utilização.
+
+------------------- Transformando formulário em objetos tipados ---------------------
+
+Criado uma nova pasta, models. Criando a classe usuário.
+Criando a implementação da classe usuário no component.ts.
+this.usuario = Object.assign({}, this.usuario, this.cadastroForm.value);
+
+------------------- Validação básica de formulários ---------------------
+
+Usando Validators.
+Criamos um span abaixo do input do nome para exibir uma mensagem de alerta e usamos a diretiva ngIf pra condicionar quando esse span será exibido. Usando a diretiva ngClass pra adicionar uma classe css ao input. (Forma manual)
+Quando tiver mais de um erro específico, tratar o ? para ignorar quando for nulo.
