@@ -239,3 +239,18 @@ No arquivo module importamos o NgModule, CommonModule e RouterModule.
 No arquivo routes importamos também o NgModule, dessa vez o routes e routermodule e o componente. Fizemos a constante com as rotas, e fizemos os imports e exports necessários.
 No arquivo de rotas principal configuramos o lazy loading chamando um módulo. 
 Erro amigo: Ao criar nosso componente ele foi automaticamente importado no módulo principal, e ao criar o novo módulo importamos novamente. Não pode ter o componente importado em dois módulos, logo, basta remover o import e declaration do módulo principal.
+
+------------------- Input decorator ---------------------
+
+Comunicação entre componentes.
+@Input a direção é sempre do componente pai para o componente filho.
+Para passar do filho pro pai usa o @Output.
+Usando o template pronto, criado e exibido a lista do produtos. 
+Usamos o decorator @input e criamos uma variável do tipo específico, onde o pai vai passar esse valor através de uma property binding.
+
+------------------- Output decorator ---------------------
+
+Comunicando de filho pra pai.
+@Output criado para mudar o status do produto de ativo para não ativo.
+No componente html filho fizemos um evento que chama um método que vai emitir um evento. No componente fizemos um método para emitir o evento, e esse evento é um output através do EventEmitter. 
+No componente html pai, criamos um property binding pra entrada de dados do produto, e o event binding pra saída de dados chamando o método mudarStatus e passando o evento como propriedade, e no componente fizemos um método que recebe o produto e muda o status do produto.
