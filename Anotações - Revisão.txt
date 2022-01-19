@@ -195,3 +195,19 @@ this.usuario = Object.assign({}, this.usuario, this.cadastroForm.value);
 Usando Validators.
 Criamos um span abaixo do input do nome para exibir uma mensagem de alerta e usamos a diretiva ngIf pra condicionar quando esse span será exibido. Usando a diretiva ngClass pra adicionar uma classe css ao input. (Forma manual)
 Quando tiver mais de um erro específico, tratar o ? para ignorar quando for nulo.
+
+------------------- Validação customizada ---------------------
+
+Vamos utilizar o pacote ng-brazil (validações de cpf, cnpj e afins). Instalando:
+npm i ng-brazil
+npm install --save ng-brazil angular2-text-mask
+Logo após as instalações, importar no arquivo de módulos.
+No componente de cadastro usamos o NgBrazilValidators.cpf. Importamos o utilsBr que é uma biblioteca para usarmos as máscaras.
+E pacote ng2-validation. Instalando:
+npm i ng2-validation
+Logo após a instalação precisamos importar no arquivo de módulos.
+Mudanças no componente para novas validações.
+
+------------------- Formulários dinâmicos ---------------------
+
+Se tiver muitos formulários recomendado a usar dessa forma. (Apenas exemplo, tem o template na pasta)
