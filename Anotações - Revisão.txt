@@ -211,3 +211,14 @@ Mudanças no componente para novas validações.
 ------------------- Formulários dinâmicos ---------------------
 
 Se tiver muitos formulários recomendado a usar dessa forma. (Apenas exemplo, tem o template na pasta)
+
+
+------------------- Angular Modules ---------------------
+
+Vantagens de usar muitos módulos e não apenas o app module ou root como principal e único módulo da aplicação.
+
+------------------- Modulo básico compartilhado ---------------------
+
+Três tipos: Módulo principal, módulo que agrupa uma série de responsabilidades (compartilhado) e módulo mais exclusivo (só existe para uma responsabilidade, com navegação própria).
+Criando o módulo de navegação, e nesse módulo diferente do principal temos que ter os exports: []. 
+Todo módulo precisa ter importação do CommonModule.

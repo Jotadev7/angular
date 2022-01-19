@@ -10,25 +10,21 @@ import { CustomFormsModule } from 'ng2-validation';
 
 import { AppComponent } from './app.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
-import { FooterComponent } from './navegacao/footer/footer.component';
-import { HomeComponent } from './navegacao/home/home.component';
-import { MenuComponent } from './navegacao/menu/menu.component';
 import { rootRouterConfig } from './app.routes';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
+import { NavegacaoModule } from './navegacao/navegacao.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SobreComponent,
-    FooterComponent,
-    HomeComponent,
-    MenuComponent,
     CadastroComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    NavegacaoModule,
     HttpClientModule,
     //TextMask.TextMaskModule, Está falhando ao importar
     NgBrazil,
