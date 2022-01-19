@@ -254,3 +254,7 @@ Comunicando de filho pra pai.
 @Output criado para mudar o status do produto de ativo para não ativo.
 No componente html filho fizemos um evento que chama um método que vai emitir um evento. No componente fizemos um método para emitir o evento, e esse evento é um output através do EventEmitter. 
 No componente html pai, criamos um property binding pra entrada de dados do produto, e o event binding pra saída de dados chamando o método mudarStatus e passando o evento como propriedade, e no componente fizemos um método que recebe o produto e muda o status do produto.
+
+------------------- Ng-content projection ---------------------
+
+Usando ng-content no componente html filho para dizer que existe um conteúdo a ser inserido. E no componente html pai definidos esse conteúdo. Usando o select para definir a classe de qual mensagem será exibida em cada momento.
