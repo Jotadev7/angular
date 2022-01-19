@@ -220,5 +220,22 @@ Vantagens de usar muitos módulos e não apenas o app module ou root como princi
 ------------------- Modulo básico compartilhado ---------------------
 
 Três tipos: Módulo principal, módulo que agrupa uma série de responsabilidades (compartilhado) e módulo mais exclusivo (só existe para uma responsabilidade, com navegação própria).
-Criando o módulo de navegação, e nesse módulo diferente do principal temos que ter os exports: []. 
+Criando o módulo de navegação, e nesse módulo diferente do principal temos que ter os exports: []. Módulo mais básico, sem navegação própria/roteamento próprio e pode ser utilizado por outros módulos.
 Todo módulo precisa ter importação do CommonModule.
+
+------------------- Modulos de roteamento ---------------------
+
+Na aplicação temos um classe para roteamento, mas vamos reestruturar.
+Continuamos usando a constante com as rotas, porém o que antes era apenas uma classe passou a ser um módulo de roteamento, mudando assim tabém as configurações no arquivo module principal.
+
+
+------------------- Lazy Loading de módulos ---------------------
+
+Vamos criar um novo módulo para produtos, que será independente com seus próprios roteamentos e responsabilidades. 
+Criando o novo componente:
+ng g c demos/arquitetura-componentes/produto-dashboard
+Criamos os arquivos module e route para esse componente.
+No arquivo module importamos o NgModule, CommonModule e RouterModule.
+No arquivo routes importamos também o NgModule, dessa vez o routes e routermodule e o componente. Fizemos a constante com as rotas, e fizemos os imports e exports necessários.
+No arquivo de rotas principal configuramos o lazy loading chamando um módulo. 
+Erro amigo: Ao criar nosso componente ele foi automaticamente importado no módulo principal, e ao criar o novo módulo importamos novamente. Não pode ter o componente importado em dois módulos, logo, basta remover o import e declaration do módulo principal.
