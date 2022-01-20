@@ -297,3 +297,7 @@ Criamos um html para exibir o produto selecionado.
 ------------------- Navegação imperativa com RouterAPI ---------------------
 
 No componente do editar produto criamos o método salvar, e no construtor chamamos outra classe: router. Usamos o método navigate (invoca a rota sem perceber, já o navigateByUrl recarrega a página).
+
+------------------- Route Tracing ---------------------
+
+No arquivo de rotas principal, temos a coleção de rotas. No imports passamos um novo parâmetro: enableTracing: true (habilitando-o). 
