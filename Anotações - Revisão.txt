@@ -258,3 +258,18 @@ No componente html pai, criamos um property binding pra entrada de dados do prod
 ------------------- Ng-content projection ---------------------
 
 Usando ng-content no componente html filho para dizer que existe um conteúdo a ser inserido. E no componente html pai definidos esse conteúdo. Usando o select para definir a classe de qual mensagem será exibida em cada momento.
+
+------------------- View-Children / Child decorator ---------------------
+
+No componente html criamos um identificador #teste. No componente usamos o decorator ViewChild (singular), passando o id teste e o false pra trabalhar apenas com um elemento. Implementamos a interface AfterViewInit, e dentro desse método criamos uma variável para receber o elemento nativo de um evento.
+
+------------------- Tratamento do 404 ---------------------
+
+Criando o componente de notfound.
+ng g c navegacao/notFound
+No arquivo de rotas criamos um path '**' para pegar os caminhos em geral que não forem reconhecidos como rotas para tratar como 404. Porém precisamos lembrar de colocar esse path como último. (O erro 404 é para o roteamento do Angular).
+
+------------------- Estilização da rota ativa ---------------------
+
+No componente html do menu, usando a diretiva routerLinkActive="active" para passar o estilo do boostrap da classe active.
+Usando o [routerLinkActiveOptions]="{ exact: true }" para verificar se a rota considerada é exatamente a mesma ou se é filha ou variante.
