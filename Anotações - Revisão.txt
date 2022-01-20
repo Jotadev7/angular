@@ -273,3 +273,8 @@ No arquivo de rotas criamos um path '**' para pegar os caminhos em geral que nã
 
 No componente html do menu, usando a diretiva routerLinkActive="active" para passar o estilo do boostrap da classe active.
 Usando o [routerLinkActiveOptions]="{ exact: true }" para verificar se a rota considerada é exatamente a mesma ou se é filha ou variante.
+
+------------------- Links de navegação dinâmica ---------------------
+
+No componente de menu criamos uma interface, e dentro do componente criamos um array de nav passando os valores da interface.
+No componente html do menu, comentamos a maneira anterior (hard codded) e fizemos da nova maneira (dinâmica), usando um ngFor para pegar todos os itens e passando os parâmetros nas diretivas.
