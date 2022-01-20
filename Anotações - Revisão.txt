@@ -293,3 +293,7 @@ E podemos fazer um próprio módulo se rotear. No produto routes criamos um chil
 Criado a classe para service, para simular o serviço que iria até o backend e registrando a classe nos providers do produto module.
 No editar-produto componente usamos o método onInit para obter o id atraves da rota.
 Criamos um html para exibir o produto selecionado.
+
+------------------- Navegação imperativa com RouterAPI ---------------------
+
+No componente do editar produto criamos o método salvar, e no construtor chamamos outra classe: router. Usamos o método navigate (invoca a rota sem perceber, já o navigateByUrl recarrega a página).
