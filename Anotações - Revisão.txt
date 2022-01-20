@@ -286,3 +286,10 @@ ng g c demos/arquitetura-componentes/editarProduto
 Nas rotas criamos um novo path, e passamos como parâmetro 'editar:id'. 
 No modulo principal vamos alterar o link base. Removemos o APP_BASE_HREF de providers. E no index.html dentro do head criamos o <base href="/">. (Uma forma, mais simples)
 E podemos fazer um próprio módulo se rotear. No produto routes criamos um children e colocamos o path nessa rota filha. E para que funcione precisamos primeiramente criar um produto.app.component.ts (componente principal do modulo de produtos) e no template declaramos o routeroutlet. Importamos no produto module o componente ProdutoAppComponent. Nas rotas, adicionamos o dashboard também aos filhos, e o path vazio agora aponta para ProdutoAppComponent. (Roteamento autônomo, mais puro, porém mais complexo)
+
+
+------------------- Obtendo parâmetros da rota ---------------------
+
+Criado a classe para service, para simular o serviço que iria até o backend e registrando a classe nos providers do produto module.
+No editar-produto componente usamos o método onInit para obter o id atraves da rota.
+Criamos um html para exibir o produto selecionado.
