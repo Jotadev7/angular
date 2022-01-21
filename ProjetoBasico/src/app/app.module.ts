@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app.routes';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AuthGuard } from './services/app.guard';
+import { CadastroGuard } from './services/cadastro.guard';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AuthGuard } from './services/app.guard';
   ],
   providers: [
     AuthGuard,
+    CadastroGuard
   ],
   bootstrap: [AppComponent]
 })

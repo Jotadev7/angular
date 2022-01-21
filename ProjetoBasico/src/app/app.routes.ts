@@ -10,7 +10,7 @@ const rootRouterConfig : Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'sobre', component: SobreComponent},
-    {path: 'cadastro', component: CadastroComponent},
+    {path: 'cadastro', component: CadastroComponent, canDeactivate: []}, // O CadastroGuard devia estar no canDeactivate.
     {path: 'produtos', loadChildren: () => import('./demos/arquitetura-componentes/produto.module').then(m => m.ProdutoModule)},
     {path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule), canLoad: [AuthGuard], canActivate: [AuthGuard]},
 

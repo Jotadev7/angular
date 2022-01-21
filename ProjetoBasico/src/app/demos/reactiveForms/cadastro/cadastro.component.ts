@@ -19,6 +19,8 @@ export class CadastroComponent implements OnInit {
 
   MASKS = utilsBr.MASKS;
 
+  mudancasNaoSalvas: boolean = false;
+
   constructor( private fb: FormBuilder) { }
 
   ngOnInit(): void {
