@@ -1,6 +1,10 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
+export function BarFactory(http: HttpClient){
+    return new BarServices(http);
+}
+
 
 @Injectable()
 export class BarServices {
