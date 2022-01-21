@@ -322,3 +322,20 @@ ng g c admin/admin-dashboard
 No app routes, no path para admin criamos um novo parâmetro: canLoad, que permite informar se devemos ou não carregar esse caminho, e dentro do canLoad coloamos o guarda da rota (serviço).
 Na pasta raiz do app criamos uma pasta para serviços, e criamos o arquivo app.guard.ts. E registramos esse serviço no módulo.
 No guard criamos um user, e usamos os métodos canLoad (para carregar) e canActivate (para acessar). CanLoad é pro módulo lazyload.
+
+------------------- Route canDeactivate Guard ---------------------
+
+Diferente do exemplo anterior, esse guarda impede que saia da rota. 
+Alteramos o componente de cadastro para conseguir pegar o status se ele está sujo ou não.
+Criamos um novo serviço para importar o canDeactivate.
+
+------------------- Pipes no Angular ---------------------
+
+Criamos um componente para filmes
+ng g c demos/pipes/filmes
+E uma classe de filme.ts
+Usando os pipes no html de filme para exibir melhor os dados. Por exemplo: usando o | date para exibir a data de lançamento de um formato melhor de ler, usando o | currency para transformar o valor em monetário... 
+
+------------------- Pipes customizados ---------------------
+
+Criando um arquivo filesize.pipe, que será um pipe customizado para exibir o tamanho do arquivo em megabytes, gigabytes. E registramos junto dos componentes no módulo.
