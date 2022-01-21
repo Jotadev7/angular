@@ -13,6 +13,7 @@ import { SobreComponent } from './institucional/sobre/sobre.component';
 import { AppRoutingModule } from './app.routes';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NavegacaoModule } from './navegacao/navegacao.module';
+import { AuthGuard } from './services/app.guard';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
     AppRoutingModule
   ],
   providers: [
-
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })

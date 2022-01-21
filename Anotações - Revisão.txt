@@ -301,3 +301,24 @@ No componente do editar produto criamos o método salvar, e no construtor chamam
 ------------------- Route Tracing ---------------------
 
 No arquivo de rotas principal, temos a coleção de rotas. No imports passamos um novo parâmetro: enableTracing: true (habilitando-o). 
+
+------------------- Route Resolves e Snapshots ---------------------
+
+No produto routes inserimos um parâmetro no caminho para ProdutoDashboard. E criando o redirecionamento para todos.
+Dentro dos serviços criamos o produtos.resolve.ts e nos providers do módulo registramos esse serviço.
+No dashboard dos produtos, removemos a lista de produtos do método onInit e agora passamos um parâmetro para o construtor do tipo ActivatedRoute e no onInit pegamos os produtos por essa rota ativa.
+
+
+------------------- Obtendo dados da rota ---------------------
+
+No produto routes, no caminho que recebe o parâmetro estado criamos um data que recebe uma string. Para exibir essa string, no componente do dashboard usamos um console.log recebendo o dado dessa rota ativa.
+
+------------------- Route Guards ---------------------
+
+Criamos um novo módulo para admins.
+E o componente admin-dashboard.
+ng g c admin/admin-dashboard
+(Módulo semelhante ao módulo de produto, com rota própria configurada e feito as devidas alterações no menu para seu uso)
+No app routes, no path para admin criamos um novo parâmetro: canLoad, que permite informar se devemos ou não carregar esse caminho, e dentro do canLoad coloamos o guarda da rota (serviço).
+Na pasta raiz do app criamos uma pasta para serviços, e criamos o arquivo app.guard.ts. E registramos esse serviço no módulo.
+No guard criamos um user, e usamos os métodos canLoad (para carregar) e canActivate (para acessar). CanLoad é pro módulo lazyload.
