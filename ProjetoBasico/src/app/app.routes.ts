@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BarComponent } from './demos/bar-di-zones/bar.component';
 import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
@@ -14,6 +15,7 @@ const rootRouterConfig : Routes = [
     {path: 'cadastro', component: CadastroComponent, canDeactivate: []}, // O CadastroGuard devia estar no canDeactivate.
     {path: 'produtos', loadChildren: () => import('./demos/arquitetura-componentes/produto.module').then(m => m.ProdutoModule)},
     {path: 'filmes', component: FilmesComponent},
+    {path: 'bar', component: BarComponent},
     {path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule), canLoad: [AuthGuard], canActivate: [AuthGuard]},
 
     {path: '**', component: NotFoundComponent},
