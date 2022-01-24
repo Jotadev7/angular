@@ -339,3 +339,33 @@ Usando os pipes no html de filme para exibir melhor os dados. Por exemplo: usand
 ------------------- Pipes customizados ---------------------
 
 Criando um arquivo filesize.pipe, que será um pipe customizado para exibir o tamanho do arquivo em megabytes, gigabytes. E registramos junto dos componentes no módulo.
+
+
+------------------- Pipe providers ---------------------
+
+Aplicamos o pipe direto no component, e não no html.
+Criamos um novo arquivo, image.pipe. 
+
+------------------- Providers - UseClass ---------------------
+
+(Aula importante, criando uma startup separada)
+Criamos um módulo para o bar.
+Também um serviço, e o componente.
+ng g c demos/bar-di-zones/bar
+Apenas um novo modo de usar o providers, passando direto o serviço ou usando o useClass pra passar uma classe.
+
+------------------- NgModules - Injection Token ---------------------
+
+No bar module teremos um método estático que fará a configuração forRoot.
+Criamos o arquivo bar.config. 
+
+------------------- Providers - UseFactory ---------------------
+
+No bar service criamos uma fábrica que vai retornar BarServices.
+No componente de bar criamos um novo provider, que irá usar o useFactory. Porém ele não trabalha sozinho, é preciso passar as dependencias.
+
+------------------- NgZones ---------------------
+
+Executando exemplo no bar componente.
+Inserimos uns métodos para incremetar um processo (dentro do Angular Zone e fora). No construtor importamos o NgZone.
+A diferença é que processar por dentro do Angular podemos acompanhar o progresso, enquanto processar por fora não dá pra acompanhar. (Por dentro mais elementos do Angular trabalham, processar fora te traz mais performance)
