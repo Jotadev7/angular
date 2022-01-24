@@ -1,5 +1,5 @@
 <div class="tasks">
-    <app-todo-list>
-        Finalizadas
-    </app-todo-list>
+    <todo-list [list]="iniciados$ | async">
+        Iniciadas
+    </todo-list>
 </div>
