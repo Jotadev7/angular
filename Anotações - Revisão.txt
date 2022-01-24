@@ -369,3 +369,34 @@ No componente de bar criamos um novo provider, que irá usar o useFactory. Poré
 Executando exemplo no bar componente.
 Inserimos uns métodos para incremetar um processo (dentro do Angular Zone e fora). No construtor importamos o NgZone.
 A diferença é que processar por dentro do Angular podemos acompanhar o progresso, enquanto processar por fora não dá pra acompanhar. (Por dentro mais elementos do Angular trabalham, processar fora te traz mais performance)
+
+------------------- Gerenciamento de estado com RXJS ---------------------
+
+(Todos os frameworks usam, inclusive o React que usa o Redux)
+Utilizaremos o RXJS.
+
+------------------- Estrutura do TO-DO ---------------------
+
+Criado uma nova pasta para o to-do, criado também os componentes.
+ng g c demos/todo-list < aqui temos o todo-component
+ng g c demos/todo-list/components/tasks
+ng g c demos/todo-list/components/tasks-finalizadas
+ng g c demos/todo-list/components/tasks-iniciadas
+ng g c demos/todo-list/components/todo-list
+Criamos um módulo próprio e um serviço. Além de criar também uma interface task e um banco de dados usando json-server, chamado todo.db.json. (Para iniciar o banco usamos o comando json-server todo.db.json, dentro do diretório src/app/demos/todo-list)
+
+------------------- Utilizando um serviço ---------------------
+
+No serviço do todo, no construtor inserimos o http client (lembrando que pra funcionar precisa estar importado no módulo). E criamos um método para receber os dados da lista de tarefas. (Fizendo usando convenção, apenas propriedade).
+*** REPLICADOS NOS 3 ***
+No componente de (task, finalizado e iniciado) criamos um Observable importando também o serviço TasksService no construtor, e no método OnInit recebemos os valores usando a propriedade.
+No html de (task, finalizado e iniciado) usamos property binding pra passar os valores dessa lista, e o pipe | async pra dizer que é um dado assincrono (que vai esperar o retorno).
+*** REPLICADOS NOS 3 ***
+
+------------------- Configurando a store ---------------------
+
+Criado novo arquivo todo.store.ts.
+Criamos uma interface com uma propriedade todolist que é uma coleção de tarefas. Criamos uma constante que vai representar o estado. E criamos uma classe, store. 
+Usamos o BehaviorSubject que é uma classe que propaga o estado atual. 
+No serviço, vamos injetar o store. No construtor criamos o private store e importamos, e no módulo precisamos registrar o Store no campo dos providers. Modificamos o método getTodoList para não ser chamado toda hora, utilizamos o pipe com o operador tap. 
+Na tarefas iniciadas e finalizadas injetamos a store, e modificamos no OnInit para recuperar apenas as tarefas mapeadas. No componente das tarefas precisamos chamar o método subscribe para ativar o fluxo de dados, através da subscription (poderiamos colocar em outro lugar). E usamos o método onDestroy para fazer o unsubscription.
