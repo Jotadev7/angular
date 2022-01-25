@@ -407,3 +407,9 @@ No html do todo-list criamos mais 4 eventos span e criamos o ngIf para informar 
 No componente todo-list fizemos um OutPut para emitir um evento. Criamos um switch para verificar qual a ação. E usamos o toggle para emitir um evento.
 No serviço criamos um método toggle para fazer o put do http no objeto com o id indicado. A store vai ser atualizada com base na manipulação do método toggle.
 Replicamos no componente de finalizadas e iniciadas o método onToggle, e no html usamos o evento click para chamar esse método.
+
+
+------------------- Testes no Angular ---------------------
+
+KARMA - Test Runner - Trabalha com Jasmine, Mocha, QUnit, ou qualquer outro através de um simples adapter.
+Jasmine - Framework de Teste - Behavior-driven developmente. Ofere uma sintaxe muito simples para escrever testes que validam o comportamento da aplicação.
