@@ -18,4 +18,8 @@ export class TasksIniciadasComponent implements OnInit {
   ngOnInit(): void {
     this.iniciados$ = this.store.getTodoList().pipe(map(todolist => todolist.filter(task => task.iniciado && !task.finalizado)));
   }
+
+  onToggle(event : any) {
+    this.taskService.toggle(event);
+  }
 }

@@ -400,3 +400,10 @@ Criamos uma interface com uma propriedade todolist que é uma coleção de taref
 Usamos o BehaviorSubject que é uma classe que propaga o estado atual. 
 No serviço, vamos injetar o store. No construtor criamos o private store e importamos, e no módulo precisamos registrar o Store no campo dos providers. Modificamos o método getTodoList para não ser chamado toda hora, utilizamos o pipe com o operador tap. 
 Na tarefas iniciadas e finalizadas injetamos a store, e modificamos no OnInit para recuperar apenas as tarefas mapeadas. No componente das tarefas precisamos chamar o método subscribe para ativar o fluxo de dados, através da subscription (poderiamos colocar em outro lugar). E usamos o método onDestroy para fazer o unsubscription.
+
+------------------- Eventos de mudança de estados ---------------------
+
+No html do todo-list criamos mais 4 eventos span e criamos o ngIf para informar quando os botões devem ser exibidos. E colocamos o evento click
+No componente todo-list fizemos um OutPut para emitir um evento. Criamos um switch para verificar qual a ação. E usamos o toggle para emitir um evento.
+No serviço criamos um método toggle para fazer o put do http no objeto com o id indicado. A store vai ser atualizada com base na manipulação do método toggle.
+Replicamos no componente de finalizadas e iniciadas o método onToggle, e no html usamos o evento click para chamar esse método.
