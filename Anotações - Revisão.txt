@@ -409,7 +409,14 @@ No serviço criamos um método toggle para fazer o put do http no objeto com o i
 Replicamos no componente de finalizadas e iniciadas o método onToggle, e no html usamos o evento click para chamar esse método.
 
 
-------------------- Testes no Angular ---------------------
+------------------- Testes de Unidade ---------------------
 
 KARMA - Test Runner - Trabalha com Jasmine, Mocha, QUnit, ou qualquer outro através de um simples adapter.
 Jasmine - Framework de Teste - Behavior-driven developmente. Ofere uma sintaxe muito simples para escrever testes que validam o comportamento da aplicação.
+
+------------------- Validação de pipes ---------------------
+
+Criamos um arquivo filesize.pipe.spec.ts e criamos teste isolado dentro desse arquivo.
+Rodamos o comando ng test no prompt de comando.
+Criamos um componente fake para fazer o teste do pipe no componente. ComponentFixture e TestBed. Criamos o teste comportamental, onde criamos o HTMLElement pra receber o dado do texto, e realizamos o teste nesse componente fake. (Teste realizado para verificar se o pipe se comportaria bem ao ser chamado por um componente).
+
