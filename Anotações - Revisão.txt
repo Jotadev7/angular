@@ -431,3 +431,12 @@ Declaramos o componente e a fixture, logo após usamos o BeforeEach que vai faze
 
 Criando um novo projeto, esse irá conter um backend em ASP NET.
 ng new front-end
+
+------------------- Projeto Final - Navegação ---------------------
+
+Criamos as pastas navegação/ menu, footer, home e notfound. E a navegação será um módulo a parte, então criamos o arquivo navegacao.module.ts.
+No arquivo navegacao module criamos a estrutura básica e já importamos também o RouterModule. E no módulo principal importamos o módulo de navegação.
+Vamos criar os componentes de footer, menu, home e notfound. E logo após registramos no módulo de navegação (imports e exports). Criado também estrutura HTML de todos os componentes. Alterado o conteúdo do index.html (foi importado o bootstrap e o font-awesome).
+No app routing module criamos o caminho para a home, informando o redirectTo na rota home para deixar como padrão e direcionar caso o usuário não informe nada.
+Apagamos a estrutura anterior do app.component.html. E informamos o menu, a estrutura de rotas, e o rodapé.
+No styles.css criamos estilos para melhorar a visualização a navegação.
