@@ -426,3 +426,8 @@ Criado um novo componente contador, com métodos e o HTML no próprio componente
 Criado o arquivo contador.component.spec.ts, e iniciamos os testes.
 Importado o ComponentFixture e TestBed, também o contador.
 Declaramos o componente e a fixture, logo após usamos o BeforeEach que vai fazer algo antes de cada teste. 
+
+------------------- Projeto Final - Revisional ---------------------
+
+Criando um novo projeto, esse irá conter um backend em ASP NET.
+ng new front-end
