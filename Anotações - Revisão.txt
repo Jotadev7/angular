@@ -440,3 +440,11 @@ Vamos criar os componentes de footer, menu, home e notfound. E logo após regist
 No app routing module criamos o caminho para a home, informando o redirectTo na rota home para deixar como padrão e direcionar caso o usuário não informe nada.
 Apagamos a estrutura anterior do app.component.html. E informamos o menu, a estrutura de rotas, e o rodapé.
 No styles.css criamos estilos para melhorar a visualização a navegação.
+
+------------------- Projeto Final - Bootstrap (Config) ---------------------
+
+Instalamos o ng-bootstrap.
+npm install --save @ng-bootstrap/ng-bootstrap
+E após a instalação importamos o módulo do bootstrap no módulo principal.
+No menu html criamos uma diretiva [ngbCollapse] e passamos como parâmetro um boolean isCollapsed (Criado no menu component). E no botão colocamos um evento (click) para alterar o valor desse boolean ao ser clicado.
+No menu component criamos a isCollapsed boolean, e no construtor informamos que esse valor inicia sempre como verdadeiro.
