@@ -475,3 +475,9 @@ Logo após a instalação registramos ele no módulo de conta, e depois no compo
 
 No serviço alteramos o método registrarUsuario para retornar uma Observable. Passamos a resposta com a chamada do método http post, e usamos o pipe para mapear e capturar os erros.
 Na pasta raiz criamos uma pasta services para os nossos serviços genéricos. Dentro dessa pasta criamos o base.service.ts que não será um Injectable, e sim uma classe abstrata (tudo que for reutilizavel para os outros serviços). E no conta service extends o BaseService (herança).
+
+------------------- Projeto Final - Tratamento de retorno do servidor ---------------------
+
+No componente de cadastro vamos inserir funcionalidade aos métodos de processamento de sucesso e de falha.
+Criamos uma classe na pasta utils, localstorage.ts. 
+No serviço base colocamos a instancia de LocalStorage como público.

@@ -6,6 +6,7 @@ import { ContaService } from '../services/conta.service';
 
 import { CustomValidators } from 'ng2-validation';
 import { fromEvent, merge, Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -23,7 +24,7 @@ export class CadastroComponent implements OnInit, AfterViewInit {
   genericValidator: GenericValidator | any;
   displayMessage: DisplayMessage = {};
 
-  constructor(private fb: FormBuilder, private contaService: ContaService) {
+  constructor(private fb: FormBuilder, private contaService: ContaService, private router: Router) {
     this.validationMessages = {
       email: {
         required: 'Informe o email',
@@ -75,10 +76,15 @@ export class CadastroComponent implements OnInit, AfterViewInit {
   }
 
   processarSucesso(response: any) {
+    this.cadastroForm.reset();
+    this.errors = [];
 
+    this.contaService.LocalStorage.salvarDadosLocaisUsuario(response);
+
+    this.router.navigate(['/home']);
   }
 
-  processarFalha(response: any) {
-    
+  processarFalha(fail: any) {
+    this.errors = fail.error.errors;
   }
 }
