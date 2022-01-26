@@ -449,3 +449,13 @@ E após a instalação importamos o módulo do bootstrap no módulo principal.
 No menu html criamos uma diretiva [ngbCollapse] e passamos como parâmetro um boolean isCollapsed (Criado no menu component). E no botão colocamos um evento (click) para alterar o valor desse boolean ao ser clicado.
 No menu component criamos a isCollapsed boolean, e no construtor informamos que esse valor inicia sempre como verdadeiro.
 Deu um erro na diretiva, e para resolver importamos o NgbModule também no módulo de navegação. (No vídeo deu outro erro, que precisaria introduzir o localize, porém no meu não deu o erro)
+
+------------------- Projeto Final - Formulário de cadastro e login ---------------------
+
+Criamos um módulo separado para a gestão de contas.
+ng g module conta
+Vamos adicionar duas funcionalidades (cadastro e login)
+ng g c conta/cadastro
+ng g c conta/login
+Criamos a pasta models onde vamos descrever os modelos, e uma pasta service para os serviços. Um arquivo chamado conta.route.ts para as rotas. E um arquivo conta.app.component.ts que será nosso componente principal. (Como criamos o component na mão precisamos lembrar de importar no module)
+No HTML do menu criamos as rotas para os componentes recém criados, apagamos os href e usamos o [routerLink].
