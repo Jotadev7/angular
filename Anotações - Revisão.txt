@@ -470,3 +470,8 @@ Importamos o serviço no providers do conta.module.
 Instalamos o pacote de validações customizadas:
 npm i ngx-custom-validators (deu erro), logo instalamos o npm i ng2-validation, que funciona da mesma forma.
 Logo após a instalação registramos ele no módulo de conta, e depois no componente. (Erro no customValidators, lembrar de usar o pacote ng2-validation) (Não compilado devido erro no arquivo generic-form-validation.ts)
+
+------------------- Projeto Final - Comunicação com back-end ---------------------
+
+No serviço alteramos o método registrarUsuario para retornar uma Observable. Passamos a resposta com a chamada do método http post, e usamos o pipe para mapear e capturar os erros.
+Na pasta raiz criamos uma pasta services para os nossos serviços genéricos. Dentro dessa pasta criamos o base.service.ts que não será um Injectable, e sim uma classe abstrata (tudo que for reutilizavel para os outros serviços). E no conta service extends o BaseService (herança).
