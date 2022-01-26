@@ -487,3 +487,10 @@ No serviço base colocamos a instancia de LocalStorage como público.
 No environments mudamos o objeto environment para informar o caminho da api.
 No serviço base passamos o environment no lugar da string que levava a api. Dependendo do ambiente, ela será trocada em tempo de execução (pode ser usada a configuração para produção, essa configuração está no arquivo angular.json). Ao executar com o ng s estamos rodando em modo de desenvolvimento, e ao rodar o ng s --prod rodamos simulando o ambiente de produção.
 
+------------------- Projeto Final - Trabalhando com usuário logado ---------------------
+
+Na navegação criamos uma nova pasta chamada menu-login, e criamos o componente.
+No componente criamos as propriedades para token, user, email, e a instancia do LocalStorage. No construtor colocamos a injestão de dependencia do router, e um método de usuario logado que retorna um boolean. Temos também um método logout que limpa os dados locais e navega para a página principal.
+No html teremos uma lista, com a diretiva ngSwitch chamando o método usuarioLogado, para caso ele esteja logado não ter o botão de entrar e o de cadastro, e caso ele esteja deslogado isso aparecer e exibir um novo botão. 
+Registramos esse componente no modulo navegação.
+E no menu html removemos os dois botões de criar e entrar, e colocamos a navegação para o componente. 
