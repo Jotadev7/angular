@@ -481,3 +481,9 @@ Na pasta raiz criamos uma pasta services para os nossos serviços genéricos. De
 No componente de cadastro vamos inserir funcionalidade aos métodos de processamento de sucesso e de falha.
 Criamos uma classe na pasta utils, localstorage.ts. 
 No serviço base colocamos a instancia de LocalStorage como público.
+
+------------------- Projeto Final - Variáveis locais por ambiente ---------------------
+
+No environments mudamos o objeto environment para informar o caminho da api.
+No serviço base passamos o environment no lugar da string que levava a api. Dependendo do ambiente, ela será trocada em tempo de execução (pode ser usada a configuração para produção, essa configuração está no arquivo angular.json). Ao executar com o ng s estamos rodando em modo de desenvolvimento, e ao rodar o ng s --prod rodamos simulando o ambiente de produção.
+
