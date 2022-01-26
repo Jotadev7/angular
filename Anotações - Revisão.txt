@@ -494,3 +494,13 @@ No componente criamos as propriedades para token, user, email, e a instancia do 
 No html teremos uma lista, com a diretiva ngSwitch chamando o método usuarioLogado, para caso ele esteja logado não ter o botão de entrar e o de cadastro, e caso ele esteja deslogado isso aparecer e exibir um novo botão. 
 Registramos esse componente no modulo navegação.
 E no menu html removemos os dois botões de criar e entrar, e colocamos a navegação para o componente. 
+
+------------------- Projeto Final - Notificações com toastr ---------------------
+
+Vamos utilizar o ngx-toastr
+npm install ngx-toastr --save
+E também o outro pacote, do angular/animations
+npm install @angular/animations --save
+Depois disso vamos adicionar o CSS no angular.json.
+No app module configuramos o BrowserAnimation e o ToastrModule.
+No componente de cadastro importamos o ToastrModule e injetamos como dependencia no construtor. E no método processarsucesso e falha vamos implementar uma mensagem para cada. Para solucionar o problema do sucesso e da navegação colocamos o toastr em uma variável e usamos a função onHidden.subscribe, criamos um gatilho para esse evento, quando esse evento terminar será redirecionado. 
