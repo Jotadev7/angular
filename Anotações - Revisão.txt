@@ -513,3 +513,9 @@ No cadastro componente precisamos inserir a proriedade que será referência.
 No módulo cadastramos o ContaGuard nos providers.
 Na rota registramos que o cadastroComponente tem o CanDeactivate e vai usar o ContaGuard.
 No menu html precisamos mudar os href para as rotas.
+
+------------------- Projeto Final - Formulário de login ---------------------
+
+Copiamos o que tem no cadastro e colamos em login. (Fazendo as adaptações necessárias, removendo o que não precisava)
+No conta service implementamos o método de login. 
+Personalizamos as mensagens do toastr, e ajustamos o css.
