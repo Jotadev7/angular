@@ -504,3 +504,12 @@ npm install @angular/animations --save
 Depois disso vamos adicionar o CSS no angular.json.
 No app module configuramos o BrowserAnimation e o ToastrModule.
 No componente de cadastro importamos o ToastrModule e injetamos como dependencia no construtor. E no método processarsucesso e falha vamos implementar uma mensagem para cada. Para solucionar o problema do sucesso e da navegação colocamos o toastr em uma variável e usamos a função onHidden.subscribe, criamos um gatilho para esse evento, quando esse evento terminar será redirecionado. 
+
+------------------- Projeto Final - Guardas de rotas ---------------------
+
+Na pasta de services criamos o conta.guard.ts.
+Nesse arquivo criamos o Injectable, e implementamos o CanDeactivate passando o componente a ser desativado. No método canDeactivate iremos descobrir se o estado do componente já foi alterado e revisar se realmente queremos abandonar.
+No cadastro componente precisamos inserir a proriedade que será referência. 
+No módulo cadastramos o ContaGuard nos providers.
+Na rota registramos que o cadastroComponente tem o CanDeactivate e vai usar o ContaGuard.
+No menu html precisamos mudar os href para as rotas.

@@ -12,6 +12,7 @@ import { ContaRoutingModule } from './conta.route';
 import { ContaService } from './services/conta.service';
 
 import { CustomFormsModule } from 'ng2-validation'
+import { ContaGuard } from './services/conta.guard';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CustomFormsModule } from 'ng2-validation'
     CustomFormsModule
   ],
   providers: [
-    ContaService
+    ContaService,
+    ContaGuard
   ]
 })
 export class ContaModule { }
