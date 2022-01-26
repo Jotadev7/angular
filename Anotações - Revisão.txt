@@ -459,3 +459,14 @@ ng g c conta/cadastro
 ng g c conta/login
 Criamos a pasta models onde vamos descrever os modelos, e uma pasta service para os serviços. Um arquivo chamado conta.route.ts para as rotas. E um arquivo conta.app.component.ts que será nosso componente principal. (Como criamos o component na mão precisamos lembrar de importar no module)
 No HTML do menu criamos as rotas para os componentes recém criados, apagamos os href e usamos o [routerLink].
+
+------------------- Projeto Final - Implementando cadastro de usuário ---------------------
+
+No models criamos um arquivo chamado usuario.ts. que terá a interface de uma classe que representará o usuário.
+Na pasta services criamos o arquivo conta.service.ts, que será o serviço para registrar o usuário e também para realizar login.
+Criamos uma nova pasta na raiz do projeto, chamada utils. Nessa pasta iremos colocar a classe generic-form-validation.ts. (Auxilia na validação do formulário)
+No cadastro component criamos uma dependencia do formBuilder. Criamos uma constante do FormGroup e no método OnInit preparamos para transformar o formulário em formgroup. Implementamos também a interface AfterViewInit que vai ter os gatilhos para validação. E criamos também o método adicionarConta que vai chamar o serviço.
+Importamos o serviço no providers do conta.module. 
+Instalamos o pacote de validações customizadas:
+npm i ngx-custom-validators (deu erro), logo instalamos o npm i ng2-validation, que funciona da mesma forma.
+Logo após a instalação registramos ele no módulo de conta, e depois no componente. (Erro no customValidators, lembrar de usar o pacote ng2-validation) (Não compilado devido erro no arquivo generic-form-validation.ts)
