@@ -554,4 +554,8 @@ npm install ngx-spinner --save
 Logo após a instalação o importamos no módulo principal.
 Injetamos o SpinnerService no construtor do componente editar, e colocamos o spinner.show para exibir, e dentro de um timeout colocamso o spinner.hide para fazer esse temporizador.
 No editar html inserimos o spinner com seus padrões de cores, tamanhos, o tipo, a mensagem a ser exibida.
- 
+
+------------------- Projeto Final - Exibição de mapa ---------------------
+
+No detalhe componente criamos uma propriedade enderecoMap, do tipo any que representará um mapa. Criamos um método enderecoCompleto para pegar a rua, cidade, bairro, estado. No construtor informamos que o enderecoMap vai ser a url do mapa do google concatenado com o endereço completo e a chave do maps (Para acessar o google maps nós precisamos de uma chave, que é feita no cadastro). No html do detalhe vamos colocar uma div com um iframe que receberá o enderecoMap.
+O erro de rota insegura ocorreu, então inserimos no construtor do detalhe o sanitizir, do DomSanitizer que irá interpretar as ameaças e passamos a url no método bypassSecurity.
