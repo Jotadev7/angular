@@ -531,3 +531,5 @@ E para usarmos as máscaras instalamos outros módulos, text-mask e text-mask-ad
 npm install -S angular2-text-mask text-mask-addons
 Logo após as instalações importamos no módulo de fornecedor. Importamos também a biblioteca UtilsBr para utilizar as masks.
 Alteramos a frase de requerido no texto de documento, para auxiliar melhor o usuário. Inserimos a validação de CNPJ, criamos um método de validarFormulario, e o configurarElementosValidacao.
+Vamos adicionar uma feature que vai ajudar bastante o usuário, a busca de CEP. Primeiro no componente html vamos adicionar um evento que será o eventBinding com base no blur da validação. O serviço utilizado é o viacep (gratuito). Criamos uma model específica CepConsulta.
+Criamos um método buscarCep que vai buscar o nosso serviço, e fará a consulta com base no http. Tivemos que remover os . e - da máscara, então dentro da pasta de utilidade criamos um novo arquivo chamado string-utils.ts. 
