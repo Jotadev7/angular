@@ -571,3 +571,7 @@ No serviço de fornecedor criamos o método de excluirFornecedor, usando o verbo
 
 No component lista colocamos a validação do tipo de fornecedor para validar com pipe de cpf ou cnpj.
 Vamos inserir um guarda de rota para não permitir o usuário sair da tela de cadastro sem concluir o preenchimento do formulário. (Usamos o canDeactivate na rota, conforme visto anteriormente)
+
+------------------- Projeto Final - Cadastro de produtos ---------------------
+
+Utilizamos o template de produtos fornecido com todos os tratamentos de valores conforme feito no módulo de fornecedores. Utilizamos também toastr e todos os outros componentes (CRUD de produto). A diferença é que no form teremos um select de fornecedor, para ligar um produto a um fornecedor.
