@@ -188,7 +188,7 @@ export class NovoComponent implements OnInit {
     this.fornecedorForm.reset();
     this.errors = [];
 
-    this.mudancasNaoSalvas = false;
+    this.mudancasNaoSalvas = false; // Para depois redirecionar
 
     let toast = this.toastr.success('Fornecedor cadastrado com sucesso!', 'Sucesso!');
     if (toast) {

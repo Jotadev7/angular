@@ -566,3 +566,8 @@ O erro de rota insegura ocorreu, então inserimos no construtor do detalhe o san
 No html de excluir colocamos as instruções href apontando pra javascript:void(0) para ter um comportamento de botão ativo, e o eventBinding com o evento click para chamar o método de excluirEvento.
 No excluir component vamos ter o método excluirEvento, que já teremos o id. E usamos também os toastr para exibir as mensagens.
 No serviço de fornecedor criamos o método de excluirFornecedor, usando o verbo delete do http, passando o fornecedor e o id e o header com a autenticação com token.
+
+------------------- Projeto Final - Finalizando CRUD de fornecedor ---------------------
+
+No component lista colocamos a validação do tipo de fornecedor para validar com pipe de cpf ou cnpj.
+Vamos inserir um guarda de rota para não permitir o usuário sair da tela de cadastro sem concluir o preenchimento do formulário. (Usamos o canDeactivate na rota, conforme visto anteriormente)
