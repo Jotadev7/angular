@@ -86,8 +86,8 @@ export class EditarComponent implements OnInit {
   }
 
   ngOnInit() {
-    
-    this.spinner.show();
+
+    this.spinner.show(); // exibir
 
     this.fornecedorForm = this.fb.group({
       id: '',
@@ -112,7 +112,7 @@ export class EditarComponent implements OnInit {
     this.preencherForm();
 
     setTimeout(() => {      
-      this.spinner.hide();
+      this.spinner.hide(); // parar de exibir
     }, 1000);
   }
 

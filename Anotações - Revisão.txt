@@ -546,4 +546,12 @@ Vamos utilizar o recurso de janelas modal, que já está dentro do bootstrap.
 No editar html, após o formulário colocamos a nossa modal. Através do <ng-template> temos um #component que é por onde ele vai achar o nosso arquivo. No botão colocamos o comportamento para abrir a janela por eventBinding chamando o método abrirModal. (Se a modal abrir em baixo é porque há algum erro na estrutura do HTML, ou outro local)
 No component injetamos no construtor uma parte que trabalha com o modal, e importamos o NgModal do NgBootstrap. Fizemos o método abrirModal que faz a abertura do modal passando um objeto. Informamos mais um formGroup, para o endereço. 
 No service do fornecedor criamos um método para atualizar endereço, com método put para atualizar, passando o id e o endereço.
+
+------------------- Projeto Final - Spinner no carregamento de dados ---------------------
+
+Vamos usar o componente ngx-spinner:
+npm install ngx-spinner --save
+Logo após a instalação o importamos no módulo principal.
+Injetamos o SpinnerService no construtor do componente editar, e colocamos o spinner.show para exibir, e dentro de um timeout colocamso o spinner.hide para fazer esse temporizador.
+No editar html inserimos o spinner com seus padrões de cores, tamanhos, o tipo, a mensagem a ser exibida.
  
