@@ -43,7 +43,7 @@ export class FornecedorService extends BaseService {
                 catchError(super.serviceError));
     }
 
-    excluirFornecedor(id: string): Observable<Fornecedor> {
+    excluirFornecedor(id: string): Observable<Fornecedor> { // Excluir
         return this.http
             .delete(this.UrlServiceV1 + "fornecedores/" + id, super.ObterAuthHeaderJson())
             .pipe(

@@ -559,3 +559,10 @@ No editar html inserimos o spinner com seus padrões de cores, tamanhos, o tipo,
 
 No detalhe componente criamos uma propriedade enderecoMap, do tipo any que representará um mapa. Criamos um método enderecoCompleto para pegar a rua, cidade, bairro, estado. No construtor informamos que o enderecoMap vai ser a url do mapa do google concatenado com o endereço completo e a chave do maps (Para acessar o google maps nós precisamos de uma chave, que é feita no cadastro). No html do detalhe vamos colocar uma div com um iframe que receberá o enderecoMap.
 O erro de rota insegura ocorreu, então inserimos no construtor do detalhe o sanitizir, do DomSanitizer que irá interpretar as ameaças e passamos a url no método bypassSecurity.
+
+
+------------------- Projeto Final - Exclusão de fornecedor ---------------------
+
+No html de excluir colocamos as instruções href apontando pra javascript:void(0) para ter um comportamento de botão ativo, e o eventBinding com o evento click para chamar o método de excluirEvento.
+No excluir component vamos ter o método excluirEvento, que já teremos o id. E usamos também os toastr para exibir as mensagens.
+No serviço de fornecedor criamos o método de excluirFornecedor, usando o verbo delete do http, passando o fornecedor e o id e o header com a autenticação com token.
