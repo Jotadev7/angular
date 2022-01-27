@@ -575,3 +575,13 @@ Vamos inserir um guarda de rota para não permitir o usuário sair da tela de ca
 ------------------- Projeto Final - Cadastro de produtos ---------------------
 
 Utilizamos o template de produtos fornecido com todos os tratamentos de valores conforme feito no módulo de fornecedores. Utilizamos também toastr e todos os outros componentes (CRUD de produto). A diferença é que no form teremos um select de fornecedor, para ligar um produto a um fornecedor.
+
+------------------- Projeto Final - Upload de imagem ---------------------
+
+No novo componente de produto, e no html onde temos a imagem ele é do tipo file e tem todos os tratamentos.
+Vamos usar o componente image-cropper:
+npm install ngx-image-cropper --save
+Após a instalação importamos ele no módulo, e no componente importamos o ImageCroppedEvent, o Transform e o Dimensions.
+No componente criamos várias propriedades, como o imageChangedEvent, o croppedImage, canvasRotation que basicamente são eventos pra quando a imagem for alterada, recortada, a rotação da imagem, a escala, a exibição do recorte. E criamos os métodos para usar essas propriedades.
+No componente html adicionamos uma div onde será inserido o código do imageCropper, utilizando os gatilhos com propertyBinding.
+
