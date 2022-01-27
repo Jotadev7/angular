@@ -16,10 +16,10 @@ import { FornecedorService } from '../services/fornecedor.service';
 })
 export class NovoComponent implements OnInit {
 
-  @ViewChildren(FormControlName, { read: ElementRef }) formInputElements: ElementRef[];
+  @ViewChildren(FormControlName, { read: ElementRef }) formInputElements: ElementRef[] = [];
 
   errors: any[] = [];
-  fornecedorForm: FormGroup;
+  fornecedorForm: FormGroup | any;
   fornecedor: Fornecedor = new Fornecedor();
 
   validationMessages: ValidationMessages;
@@ -28,7 +28,7 @@ export class NovoComponent implements OnInit {
 
   formResult: string = '';
 
-  mudancasNaoSalvas: boolean;
+  mudancasNaoSalvas: boolean = false;
 
   constructor(private fb: FormBuilder,
     private fornecedorService: FornecedorService,
@@ -73,6 +73,16 @@ export class NovoComponent implements OnInit {
       ativo: ['', [Validators.required]],
       tipoFornecedor: ['', [Validators.required]]     
     });
+
+    endereco: this.fb.group({
+      logradouro: ['', Validators.required],
+      numero: ['', Validators.required],
+      complemento: [''],
+      bairro: ['', Validators.required],
+      cep: ['', Validators.required],
+      cidade: ['', Validators.required],
+      estado: ['', Validators.required],
+    })
   }
 
   ngAfterViewInit(): void {

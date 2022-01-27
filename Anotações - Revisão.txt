@@ -522,4 +522,10 @@ Personalizamos as mensagens do toastr, e ajustamos o css.
 
 ------------------- Projeto Final - CRUD de Fornecedores (IMPORTANTE) ---------------------
 
-
+Usamos o template básico fornecido, criando a pasta fornecedor com suas rotas, serviços, modelos e componentes.
+Primeiro problema a ser resolvido foi o de receber dois formulários em um único componente, logo criamos um outro formGroup no método oninit. 
+No html de novo dentro da div principal colocamos um forGroupName.
+Para a validação de CPF e CNPJ utilizaremos o pacote ng-brazil:
+npm install ng-brazil
+E para usarmos as máscaras instalamos outros módulos, text-mask e text-mask-addons:
+npm install -S angular2-text-mask text-mask-addons
