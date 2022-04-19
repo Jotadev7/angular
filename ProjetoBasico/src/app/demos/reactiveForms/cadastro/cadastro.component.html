@@ -10,7 +10,7 @@
                 <div class="col-md-10">
                     <input class="form-control" type="text" id="nome" placeholder="Nome (requerido)" formControlName="nome" [ngClass]="{'is-invalid': cadastroForm.get('nome').errors && (cadastroForm.get('nome').dirty || cadastroForm.get('nome').touched)}">
                     <span class="text-danger" *ngIf="cadastroForm.get('nome').errors && (cadastroForm.get('nome').dirty || cadastroForm.get('nome').touched)">
-                        <p>Preencha o campo nome</p>
+                        <p id="alertaNome">Preencha o campo nome</p>
                     </span>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     <p>Formulário válido: {{cadastroForm.valid}}</p>
                     <p>Formulário tocado: {{cadastroForm.touched}}</p>
                     <p>Formulário sujo: {{cadastroForm.dirty}}</p><br>
-                    <p>Formulário: {{formResult}}</p>
+                    <p id="resultado">Formulário: {{formResult}}</p>
                 </div>
             </div>
 
